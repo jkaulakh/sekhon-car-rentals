@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 PHONE_DISPLAY = "+91 98142 43611"
 PHONE_LINK = "+9198142 43611"
-WHATSAPP_LINK = "https://wa.me/919814243611?text=Hi%20Sekhon%20Car%20Rentals%2C%20I%20want%20to%20check%20car%20availability."
+WHATSAPP_LINK = "https://wa.me/919814243611?text=Hi%20Gurlal%20Singh%2C%20I%20want%20to%20book%20a%20car."
 
 CARS = [
     {
