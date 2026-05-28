@@ -1,0 +1,429 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>
+    Sekhon Car Rentals | Car Rental in India
+</title>
+
+<meta
+    name="description"
+    content="Sekhon Car Rentals offers clean, comfortable and affordable rental cars across India."
+>
+
+<link rel="preconnect"
+      href="https://images.unsplash.com">
+
+<link rel="stylesheet"
+      href="static/style.css">
+
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header class="site-header">
+
+    <nav class="nav">
+
+        <a class="brand"
+           href="#top">
+
+            <span class="brand-mark">
+                S
+            </span>
+
+            <span>
+                Sekhon Car Rentals
+            </span>
+
+        </a>
+
+        <div class="nav-actions">
+
+            <a href="#cars">
+                Cars
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a class="nav-call"
+               href="tel:+919814243611">
+
+                Call Now
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- =========================
+     MAIN
+========================== -->
+
+<main id="top">
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <!-- =========================
+     HERO SECTION
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <img
+        class="hero-bg-image"
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1800&auto=format&fit=crop"
+        alt="Luxury rental car"
+    >
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            Trusted Car Rental Across India
+        </p>
+
+        <h1>
+            Luxury Car Rentals
+        </h1>
+
+        <p class="hero-text">
+            Premium, comfortable and affordable cars for airport transfers,
+            weddings, local rides, business travel and outstation trips.
+        </p>
+
+        <div class="owner-details">
+
+            <span>Available 24/7</span>
+            <span>All India Service</span>
+            <span>Direct Owner Booking</span>
+
+        </div>
+
+        <div class="hero-actions">
+
+            <a class="btn btn-primary"
+               href="tel:+919814243611">
+                Call Now
+            </a>
+
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/919814243611"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+         TRUST BAND
+    ========================== -->
+
+    <section class="trust-band"
+             aria-label="Service highlights">
+
+        <div>
+
+            <strong>
+                24/7
+            </strong>
+
+            <span>
+                booking & travel support
+            </span>
+
+        </div>
+
+        <div>
+
+            <strong>
+                Majha
+            </strong>
+
+            <span>
+                Punjab to Delhi coverage
+            </span>
+
+        </div>
+
+        <div>
+
+            <strong>
+                Direct
+            </strong>
+
+            <span>
+                 owner pricing & booking
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         CARS SECTION
+    ========================== -->
+
+    <section class="section"
+             id="cars">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Available Cars
+            </p>
+
+            <h2>
+                Choose the right car for your trip
+            </h2>
+
+            <p>
+                Every vehicle is kept clean, comfortable and ready for
+                city drives, long routes and family travel.
+            </p>
+
+        </div>
+
+        <div class="coverage-box">
+
+    <p>
+        Serving all major cities across Majha Punjab including
+        <strong>Amritsar</strong>,
+        <strong>Batala</strong>,
+        <strong>Kapurthala</strong>,
+        <strong>Tarn Taran</strong>,
+        <strong>Gurdaspur</strong>
+        and nearby areas for Delhi routes, tours and rentals.
+    </p>
+
+</div>
+
+        <div class="cars-grid">
+
+    {% for car in cars %}
+
+    <article class="car-card">
+
+        <img
+            src="{{ url_for('static', filename='images/' + car.image) }}"
+            alt="{{ car.name }}"
+        >
+
+        <div class="car-content">
+
+            <h3>
+                {{ car.name }}
+            </h3>
+
+            <div class="service-pricing">
+
+                {% for service in car.services %}
+
+                <div class="service-row">
+
+                    <span>
+                        {{ service.title }}
+                    </span>
+
+                    <strong>
+                        {{ service.price }}
+                    </strong>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="card-actions">
+
+                <a class="btn btn-dark"
+                   href="tel:{{ phone_link }}">
+
+                    Call
+
+                </a>
+
+                <a class="btn btn-whatsapp"
+                   href="{{ whatsapp_link }}"
+                   target="_blank">
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+    {% endfor %}
+
+</div>
+<h2 class="section-title">
+    Why Choose Sekhon Car Rentals
+</h2>
+
+        <div class="service-grid">
+
+            <article>
+
+                <span class="service-icon">
+                    01
+                </span>
+
+                <h3>
+                    Well-maintained cars
+                </h3>
+
+                <p>
+                    Vehicles are cleaned and checked before every booking.
+                </p>
+
+            </article>
+
+            <article>
+
+                <span class="service-icon">
+                    02
+                </span>
+
+                <h3>
+                    Direct booking
+                </h3>
+
+                <p>
+                    Speak directly with the owner for pricing and availability.
+                </p>
+
+            </article>
+
+            <article>
+
+                <span class="service-icon">
+                    03
+                </span>
+
+                <h3>
+                    Flexible trips
+                </h3>
+
+                <p>
+                    Book for local rides, airport drops and family travel.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section class="contact-section"
+             id="contact">
+
+        <div>
+
+            <p class="eyebrow">
+                Contact Owner
+            </p>
+
+            <h2>
+                Ready to book a car?
+            </h2>
+
+            <p>
+                Call or send a WhatsApp message with your travel date,
+                pickup location and preferred car.
+            </p>
+
+        </div>
+
+        <div class="contact-actions">
+
+            <a class="btn btn-primary"
+               href="tel:+919814243611">
+
+                Call +91 99999 99999
+
+            </a>
+
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/919814243611"
+               target="_blank">
+
+                WhatsApp Owner
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <strong>
+        Sekhon Car Rentals
+    </strong>
+
+    <span>
+        India
+    </span>
+
+    <span>
+        © 2026 All Rights Reserved
+    </span>
+
+</footer>
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================== -->
+
+<a href="https://wa.me/919814243611"
+   class="floating-whatsapp"
+   target="_blank">
+
+    WhatsApp
+
+</a>
+
+
+</body>
+
+</html>
