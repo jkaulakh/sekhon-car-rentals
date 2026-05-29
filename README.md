@@ -1,22 +1,37 @@
-# Sekhon Car Rentals
+# Sekhon Car Zone
 
-Premium car rental website built using Flask, HTML and CSS.
+A professional car rental and tour booking website built with Flask, HTML, and CSS.
 
 ## Features
 
-- Delhi round trip services
-- One way travel
-- Himachal tours
+- Delhi Airport transfers
+- Himachal Pradesh tours
+- Rajasthan tours
+- Srinagar (J&K) tours
+- Leh-Ladakh tours
 - Wedding Fortuner booking
-- Self drive SUVs
-- WhatsApp direct booking
-- Responsive modern UI
+- Self-drive SUV rentals
+- Direct WhatsApp booking
+- Mobile-responsive design
+- Owner contact integration
 
 ## Technologies Used
 
-- Python Flask
+- Python
+- Flask
 - HTML5
 - CSS3
+
+## Project Structure
+
+├── app.py  
+├── requirements.txt  
+├── Procfile  
+├── templates/  
+│   └── index.html  
+├── static/  
+│   ├── style.css  
+│   └── images/
 
 ## Run Locally
 
